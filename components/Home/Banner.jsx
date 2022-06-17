@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function Banner() {
   return (
@@ -12,7 +13,7 @@ function Banner() {
           </div>
         </div>
         <div className="container">
-          <img className="image" src="/images/computer.svg" alt="Computadora AngelWeb" />
+          <Image className="image" src="/images/computer.svg" alt="Computadora AngelWeb" width={467} height={380} placeholder="blur" blurDataURL="/images/computer.svg" />
         </div>
       </div>
     </section>

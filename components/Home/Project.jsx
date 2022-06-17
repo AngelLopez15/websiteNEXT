@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function Project(props) {
   const {
@@ -6,6 +7,11 @@ function Project(props) {
     description,
     imagen
   } = props
+
+  // El componente IMAGE tamnbien cuenta con la propiedad layout
+  // Si escogemos que el tipo sea fill va a rellenar con la imagen 
+  // de acuerdo al tamaño de su contenedor padre. Entonces ya no es necesario
+  // poner el width ni el heigth
 
   return (
     <Link href="#" className="project-item">
@@ -15,7 +21,7 @@ function Project(props) {
           <p>{ description }</p>
         </div>
         <div className="image-container">
-          <img src={ imagen } alt={ title } />
+          <Image src={ imagen } alt={ title } layout="fill" />
         </div>
       </article>
     </Link>

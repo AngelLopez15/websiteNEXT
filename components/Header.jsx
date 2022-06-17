@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import MainMenu from "./MainMenu";
 
@@ -6,7 +7,7 @@ function Header() {
     <header className="main-header">
       <div className="content-wrapper">
         <Link href="/">
-          <img src="/images/logo.svg" alt="Logo EDsoft" />
+          <Image src="/images/logo.svg" alt="Logo EDsoft" width={136} height={32} />
         </Link>
         <span id="open-menu-button" className="jam jam-menu"></span>
         <MainMenu />

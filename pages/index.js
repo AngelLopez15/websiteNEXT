@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import AboutUs from "../components/Home/AboutUs";
 import Banner from "../components/Home/Banner";
 import Jobs from "../components/Home/Jobs";
@@ -11,17 +12,23 @@ export default function Home(props) {
   } = props
 
   return (
-    <main>
-      <Banner />
-      <Services 
-        services={ services }
+    <>
+      <NextSeo 
+        title="Bienvenidos | Angel Web"
+        description="Página de inicio de Angel Web"
       />
-      <AboutUs />
-      <Projects 
-        projects={ projects }
-      />
-      <Jobs />
-    </main>
+      <main>
+        <Banner />
+        <Services 
+          services={ services }
+        />
+        <AboutUs />
+        <Projects 
+          projects={ projects }
+        />
+        <Jobs />
+      </main>
+    </>
   )
 }
 
